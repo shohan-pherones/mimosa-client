@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BASE STYLES */
+main {
+  @apply mt-20;
+}
+
 /* COMMON STYLES */
 .sp {
   @apply py-40;
@@ -46,4 +51,17 @@ small {
 
 .swiper-pagination-bullet-active {
   background-color: rgb(0, 145, 181) !important;
+}
+
+/* LINK STYLES */
+.link-item {
+  @apply relative;
+}
+
+.link-item::after {
+  @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-black content-[""];
+}
+
+.link-item:hover::after {
+  @apply w-full;
 }
